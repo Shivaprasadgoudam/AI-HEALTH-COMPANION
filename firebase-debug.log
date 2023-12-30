@@ -1,0 +1,195 @@
+[debug] [2023-12-30T06:22:48.659Z] ----------------------------------------------------------------------
+[debug] [2023-12-30T06:22:48.662Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Hp\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-12-30T06:22:48.663Z] CLI Version:   13.0.2
+[debug] [2023-12-30T06:22:48.663Z] Platform:      win32
+[debug] [2023-12-30T06:22:48.664Z] Node Version:  v18.17.1
+[debug] [2023-12-30T06:22:48.665Z] Time:          Sat Dec 30 2023 11:52:48 GMT+0530 (India Standard Time)
+[debug] [2023-12-30T06:22:48.665Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-30T06:22:48.677Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-30T06:22:48.678Z] > authorizing via signed-in user (shivaprasadgoudam@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Hp\Downloads\aibot\aibot
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-12-30T06:23:23.737Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2023-12-30T06:23:26.042Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2023-12-30T06:23:26.043Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project ai-health-chatbot-dd8ef (AI HEALTH CHATBOT) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2023-12-30T06:23:27.659Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/firebasedatabase.googleapis.com [none]
+[debug] [2023-12-30T06:23:27.659Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/ai-health-chatbot-dd8ef
+[debug] [2023-12-30T06:23:29.696Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/firebasedatabase.googleapis.com 200
+[debug] [2023-12-30T06:23:29.696Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2023-12-30T06:23:29.698Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ai-health-chatbot-dd8ef [none]
+[debug] [2023-12-30T06:23:30.733Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ai-health-chatbot-dd8ef 200
+[debug] [2023-12-30T06:23:30.734Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ai-health-chatbot-dd8ef {"projectId":"ai-health-chatbot-dd8ef","projectNumber":"890362522737","displayName":"AI HEALTH CHATBOT","name":"projects/ai-health-chatbot-dd8ef","resources":{"hostingSite":"ai-health-chatbot-dd8ef"},"state":"ACTIVE","etag":"1_1c6ba25f-4309-4833-a5ac-b632bbf5481f"}
+[debug] [2023-12-30T06:23:49.692Z] >>> [apiv2][query] POST https://firebasedatabase.googleapis.com/v1beta/projects/ai-health-chatbot-dd8ef/locations/asia-southeast1/instances databaseId=ai-health-chatbot-dd8ef-default-rtdb&validateOnly=true
+[debug] [2023-12-30T06:23:49.692Z] >>> [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/ai-health-chatbot-dd8ef/locations/asia-southeast1/instances {"type":"default_database"}
+[debug] [2023-12-30T06:23:52.117Z] <<< [apiv2][status] POST https://firebasedatabase.googleapis.com/v1beta/projects/ai-health-chatbot-dd8ef/locations/asia-southeast1/instances 200
+[debug] [2023-12-30T06:23:52.118Z] <<< [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/ai-health-chatbot-dd8ef/locations/asia-southeast1/instances {"name":"projects/890362522737/locations/asia-southeast1/instances/ai-health-chatbot-dd8ef-default-rtdb","project":"projects/890362522737","databaseUrl":"https://ai-health-chatbot-dd8ef-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2023-12-30T06:23:52.120Z] >>> [apiv2][query] POST https://firebasedatabase.googleapis.com/v1beta/projects/ai-health-chatbot-dd8ef/locations/asia-southeast1/instances databaseId=ai-health-chatbot-dd8ef-default-rtdb
+[debug] [2023-12-30T06:23:52.120Z] >>> [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/ai-health-chatbot-dd8ef/locations/asia-southeast1/instances {"type":"default_database"}
+[debug] [2023-12-30T06:23:54.574Z] <<< [apiv2][status] POST https://firebasedatabase.googleapis.com/v1beta/projects/ai-health-chatbot-dd8ef/locations/asia-southeast1/instances 200
+[debug] [2023-12-30T06:23:54.574Z] <<< [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/ai-health-chatbot-dd8ef/locations/asia-southeast1/instances {"name":"projects/890362522737/locations/asia-southeast1/instances/ai-health-chatbot-dd8ef-default-rtdb","project":"projects/890362522737","databaseUrl":"https://ai-health-chatbot-dd8ef-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2023-12-30T06:24:13.879Z] >>> [apiv2][query] GET https://ai-health-chatbot-dd8ef-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json [none]
+[debug] [2023-12-30T06:24:16.074Z] <<< [apiv2][status] GET https://ai-health-chatbot-dd8ef-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 200
+[debug] [2023-12-30T06:24:16.074Z] <<< [apiv2][body] GET https://ai-health-chatbot-dd8ef-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json [stream]
+[info] +  Database Rules for ai-health-chatbot-dd8ef-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2023-12-30T06:24:16.080Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/firestore.googleapis.com [none]
+[debug] [2023-12-30T06:24:16.080Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/firestore.googleapis.com x-goog-quota-user=projects/ai-health-chatbot-dd8ef
+[debug] [2023-12-30T06:24:17.921Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/firestore.googleapis.com 200
+[debug] [2023-12-30T06:24:17.921Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/firestore.googleapis.com [omitted]
+[debug] [2023-12-30T06:24:17.922Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/databases/(default) [none]
+[debug] [2023-12-30T06:24:18.739Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/databases/(default) 200
+[debug] [2023-12-30T06:24:18.740Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/databases/(default) {"name":"projects/ai-health-chatbot-dd8ef/databases/(default)","uid":"ff49c60b-2009-4621-b3ee-b81c2ef242af","createTime":"2023-12-30T06:22:07.711288Z","updateTime":"2023-12-30T06:22:07.711288Z","locationId":"asia-south1","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2023-12-30T06:22:07.711288Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"j","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IN/14ZbDtoMDMLj4rdjCtoMD"}
+[debug] [2023-12-30T06:24:18.740Z] database_type: FIRESTORE_NATIVE
+[debug] [2023-12-30T06:24:18.741Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-30T06:24:18.741Z] > authorizing via signed-in user (shivaprasadgoudam@gmail.com)
+[debug] [2023-12-30T06:24:18.741Z] [iam] checking project ai-health-chatbot-dd8ef for permissions ["firebase.projects.get"]
+[debug] [2023-12-30T06:24:18.742Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-health-chatbot-dd8ef:testIamPermissions [none]
+[debug] [2023-12-30T06:24:18.742Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-health-chatbot-dd8ef:testIamPermissions x-goog-quota-user=projects/ai-health-chatbot-dd8ef
+[debug] [2023-12-30T06:24:18.742Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-health-chatbot-dd8ef:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-30T06:24:20.687Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-health-chatbot-dd8ef:testIamPermissions 200
+[debug] [2023-12-30T06:24:20.688Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-health-chatbot-dd8ef:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2023-12-30T06:24:29.449Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/releases pageSize=10&pageToken=
+[debug] [2023-12-30T06:24:31.335Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/releases 200
+[debug] [2023-12-30T06:24:31.335Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/releases {"releases":[{"name":"projects/ai-health-chatbot-dd8ef/releases/cloud.firestore","rulesetName":"projects/ai-health-chatbot-dd8ef/rulesets/d71a07c2-4cd3-44ce-8de6-7aae966a15fd","createTime":"2023-12-30T06:22:18.217970Z","updateTime":"2023-12-30T06:22:18.217970Z"}]}
+[debug] [2023-12-30T06:24:31.335Z] Found ruleset: projects/ai-health-chatbot-dd8ef/rulesets/d71a07c2-4cd3-44ce-8de6-7aae966a15fd
+[debug] [2023-12-30T06:24:31.336Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/rulesets/d71a07c2-4cd3-44ce-8de6-7aae966a15fd [none]
+[debug] [2023-12-30T06:24:33.281Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/rulesets/d71a07c2-4cd3-44ce-8de6-7aae966a15fd 200
+[debug] [2023-12-30T06:24:33.281Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/rulesets/d71a07c2-4cd3-44ce-8de6-7aae966a15fd [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2023-12-30T06:24:35.885Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2023-12-30T06:24:35.889Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2023-12-30T06:24:36.656Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2023-12-30T06:24:36.657Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2023-12-30T06:24:36.865Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2023-12-30T06:24:36.865Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/ai-health-chatbot-dd8ef/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Functions Setup
+[debug] [2023-12-30T06:24:36.869Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-30T06:24:36.869Z] > authorizing via signed-in user (shivaprasadgoudam@gmail.com)
+[debug] [2023-12-30T06:24:36.869Z] [iam] checking project ai-health-chatbot-dd8ef for permissions ["firebase.projects.get"]
+[debug] [2023-12-30T06:24:36.869Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-health-chatbot-dd8ef:testIamPermissions [none]
+[debug] [2023-12-30T06:24:36.870Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-health-chatbot-dd8ef:testIamPermissions x-goog-quota-user=projects/ai-health-chatbot-dd8ef
+[debug] [2023-12-30T06:24:36.870Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-health-chatbot-dd8ef:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-30T06:24:38.297Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-health-chatbot-dd8ef:testIamPermissions 200
+[debug] [2023-12-30T06:24:38.298Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-health-chatbot-dd8ef:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-30T06:24:38.298Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-12-30T06:24:38.299Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/ai-health-chatbot-dd8ef
+[debug] [2023-12-30T06:24:38.301Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-12-30T06:24:38.302Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/ai-health-chatbot-dd8ef
+[debug] [2023-12-30T06:24:40.146Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/runtimeconfig.googleapis.com 200
+[debug] [2023-12-30T06:24:40.146Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-12-30T06:24:40.148Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/cloudfunctions.googleapis.com 200
+[debug] [2023-12-30T06:24:40.148Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2023-12-30T06:24:40.149Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2023-12-30T06:24:40.149Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/ai-health-chatbot-dd8ef
+[debug] [2023-12-30T06:24:42.474Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2023-12-30T06:24:42.474Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2023-12-30T06:24:52.500Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-12-30T06:24:52.501Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/ai-health-chatbot-dd8ef
+[debug] [2023-12-30T06:24:54.497Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/cloudfunctions.googleapis.com 200
+[debug] [2023-12-30T06:24:54.497Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ai-health-chatbot-dd8ef/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/package.json 
+[info] +  Wrote functions/.eslintrc.js 
+[info] +  Wrote functions/index.js 
+[info] +  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[debug] [2023-12-30T06:28:13.291Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ai-health-chatbot-dd8ef [none]
+[debug] [2023-12-30T06:28:13.996Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ai-health-chatbot-dd8ef 200
+[debug] [2023-12-30T06:28:13.996Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ai-health-chatbot-dd8ef {"projectId":"ai-health-chatbot-dd8ef","projectNumber":"890362522737","displayName":"AI HEALTH CHATBOT","name":"projects/ai-health-chatbot-dd8ef","resources":{"hostingSite":"ai-health-chatbot-dd8ef","realtimeDatabaseInstance":"ai-health-chatbot-dd8ef-default-rtdb"},"state":"ACTIVE","etag":"1_1c6ba25f-4309-4833-a5ac-b632bbf5481f"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2023-12-30T06:28:57.210Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2023-12-30T06:28:58.001Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2023-12-30T06:28:58.001Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.7.1","browserURL":"https://www.gstatic.com/firebasejs/10.7.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.7.1/firebase.tgz"},"live":{"version":"10.7","browserURL":"https://www.gstatic.com/firebasejs/live/10.7/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.7/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.7.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.7.1/firebase-auth/cordova.js","functions":"https://www.gstatic.com/firebasejs/10.7.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.7.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.7.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.7.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming C:\Users\Hp\Downloads\aibot\aibot is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=469945288&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-12-30T06:29:10.373Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-12-30T06:29:10.374Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-12-30T06:29:10.882Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-12-30T06:29:10.882Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-12-30T06:29:10.891Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-12-30T06:29:11.392Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-12-30T06:29:11.393Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Shivaprasadgoudam","id":108618132,"node_id":"U_kgDOBnlhlA","avatar_url":"https://avatars.githubusercontent.com/u/108618132?v=4","gravatar_id":"","url":"https://api.github.com/users/Shivaprasadgoudam","html_url":"https://github.com/Shivaprasadgoudam","followers_url":"https://api.github.com/users/Shivaprasadgoudam/followers","following_url":"https://api.github.com/users/Shivaprasadgoudam/following{/other_user}","gists_url":"https://api.github.com/users/Shivaprasadgoudam/gists{/gist_id}","starred_url":"https://api.github.com/users/Shivaprasadgoudam/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Shivaprasadgoudam/subscriptions","organizations_url":"https://api.github.com/users/Shivaprasadgoudam/orgs","repos_url":"https://api.github.com/users/Shivaprasadgoudam/repos","events_url":"https://api.github.com/users/Shivaprasadgoudam/events{/privacy}","received_events_url":"https://api.github.com/users/Shivaprasadgoudam/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":4,"public_gists":0,"followers":0,"following":0,"created_at":"2022-07-03T13:18:27Z","updated_at":"2023-12-06T09:15:40Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":26734,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as Shivaprasadgoudam 
+[info] 
+[debug] [2023-12-30T06:29:21.348Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2023-12-30T06:29:22.353Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2023-12-30T06:29:22.379Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2023-12-30T06:29:22.379Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-12-30T06:29:22.880Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2023-12-30T06:29:22.881Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 

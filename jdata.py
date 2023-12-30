@@ -1,0 +1,295 @@
+import json
+
+# Your data here...
+data = [
+    [
+    {
+        "d_id": 1,
+        "d_name": "Malaria",
+        "description": "An infectious disease caused by protozoan parasites from the Plasmodium family that can be transmitted by the bite of the Anopheles mosquito or by a contaminated needle or transfusion. Falciparum malaria is the most deadly type.",
+        "symptoms": "[1]Chills [2]Vomiting [3]High_Fever [4]Sweating [5]Headache [6]Nausea [7]Diarrhoea [8]Muscle_Pain",
+        "precautions": "[1]Consult nearest hospital. [2]Avoid oily food. [3]Avoid non veg food. [4]Keep mosquitoes out."
+    },
+    {
+        "d_id": 2,
+        "d_name": "Hepatitis A",
+        "description": "Hepatitis A is a highly contagious liver infection caused by the hepatitis A virus. The virus is one of several types of hepatitis viruses that cause inflammation and affect your liver's ability to function.",
+        "symptoms": "[1]Joint Pain. [2]Vomiting. [3]Yellowish Skin. [4]Dark Urine. [5]Nausea. [6]Loss of Appetite. [7]Abdominal Pain. [8]Diarrhoea. [9]Mild Fever. [10]Yellowing of Eyes. [11]Muscle Pain.",
+        "precautions": "[1]Consult nearest hospital. [2]Wash hands through [3]Avoid fatty spicy food [4]Medication"
+    },
+    {
+        "d_id": 3,
+        "d_name": "Diabetes",
+        "description": "Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. Blood glucose is your main source of energy and comes from the food you eat. Insulin, a hormone made by the pancreas, helps glucose from food get into your cells to be used for energy.",
+        "symptoms": "[1]Fatigue. [2]Weight Loss. [3]Restlessness. [4]Lethargy. [5]Irregular Sugar Level. [6]Blurred and Distorted Vision. [7]Obesity. [8]Excessive Hunger. [9]Increased Appetite. [10]Polyuria",
+        "precautions": "[1]Have Balanced Diet. [2]Do Exercises. [3]Consult doctor. [4]Follow up Sugar Level."
+    },
+    {
+        "d_id": 4,
+        "d_name": "Hypertension",
+        "description": "Hypertension (HTN or HT), also known as high blood pressure (HBP), is a long-term medical condition in which the blood pressure in the arteries is persistently elevated. High blood pressure typically does not cause symptoms.",
+        "symptoms": "[1]Headache. [2]Chest Pain. [3]Dizziness. [4]Loss of Balance. [5]Lack of Concentration",
+        "precautions": "[1]Meditation. [2]Salt Baths. [3]Reduce Stress. [4]Get proper sleep."
+    },
+    {
+        "d_id": 5,
+        "d_name": "Common Cold",
+        "description": "The common cold is a viral infection of your nose and throat (upper respiratory tract). It's usually harmless, although it might not feel that way. Many types of viruses can cause a common cold.",
+        "symptoms": "[1]Continuous Sneezing. [2]Chills. [3]Fatigue. [4]Cough. [5]High Fever. [6]Headache. [7]Swelled lymph nodes. [8]Malaise. [9]Phlegm. [10]Throat Irritation. [11]Redness of Eyes. [12]Sinus Pressure. [13]Runny Nose. [14]Congestion. [15]Chest Pain. [16]Loss of Smell. [17]Muscle Pain",
+        "precautions": "[1]Drink Vitamin 'C' rich drinks. [2]Take Vapour. [3]Avoid Cold Food. [4]Keep Fever in check."
+    },
+    {
+        "d_id": 6,
+        "d_name": "AIDS",
+        "description": "Acquired immunodeficiency syndrome (AIDS) is a chronic, potentially life-threatening condition caused by the human immunodeficiency virus (HIV). By damaging your immune system, HIV interferes with your body's ability to fight infection and disease.",
+        "symptoms": "[1]Muscle Wasting. [2]Patches in throat. [3]High Fever. [4]Extra Material Contacts",
+        "precautions": "[1]Avoid open cuts. [2]Wear PPE if possible. [3]Consult Doctor. [4]Follow up."
+    },
+    {
+        "d_id": 7,
+        "d_name": "Typhoid",
+        "description": "An acute illness characterized by fever caused by infection with the bacterium Salmonella typhi. Typhoid fever has an insidious onset, with fever, headache, constipation, malaise, chills, and muscle pain. Diarrhea is uncommon, and vomiting is not usually severe.",
+        "symptoms": "[1]Chills. [2]Vomiting. [3]Fatigue. [4]High Fever. [5]Headache. [6]Nausea. [7]Constipation. [8]Abdominal Pain. [9]Diarrhoea. [10]Toxic look (Typhos). [11]Belly Pain",
+        "precautions": "[1]Eat High Calorie Vegetables. [2]Antibiotic therapy. [3]Consult Doctor. [4]Medication"
+    },
+    {
+        "d_id": 8,
+        "d_name": "Hepatitis C",
+        "description": "Inflammation of the liver due to the hepatitis C virus (HCV), which is usually spread via blood transfusion (rare), hemodialysis, and needle sticks. The damage hepatitis C does to the liver can lead to cirrhosis and its complications as well as cancer.",
+        "symptoms": "[1]Fatigue. [2]Yellowish Skin. [3]Nausea. [4]Loss of Appetite. [5]Yellowing of Eyes. [6]Family History",
+        "precautions": "[1]Consult nearest hospital. [2]Eat healthy food. [3]Vaccination. [4]Medication"
+    },
+    {
+        "d_id": 9,
+        "d_name": "Heart attack",
+        "description": "The death of heart muscle due to the loss of blood supply. The loss of blood supply is usually caused by a complete blockage of a coronary artery, one of the arteries that supplies blood to the heart muscle.",
+        "symptoms": "[1]Vomiting. [2]Breathlessness. [3]Sweating. [4]Chest Pain",
+        "precautions": "[1]Call Ambulance. [2]Chew or Swallow Aspirin. [3]Keep calm."
+    },
+    {
+        "d_id": 10,
+        "d_name": "Migraine",
+        "description": "A migraine can cause severe throbbing pain or a pulsing sensation, usually on one side of the head. It's often accompanied by nausea, vomiting, and extreme sensitivity to light and sound. Migraine attacks can last for hours to days, and the pain can be so severe that it interferes with your daily activities.",
+        "symptoms": "[1]Acidity. [2]Indigestion. [3]Headache. [4]Blurred and distorted vision. [5]Excessive Hunger. [6]Stiff Neck. [7]Depression. [8]Irritability. [9]Visual Disturbances",
+        "precautions": "[1]Meditation. [2]Reduce stress. [3]Use polaroid glasses in sun. [4]Consult Doctor"
+    }
+    ,
+     {
+        "d_id": 11,
+        "d_name": "Fungal Infection",
+        "description": "A fungal infection can manifest on the skin, nails, or other body parts, leading to itching, redness, and discomfort.",
+        "symptoms": "[1]Itching. [2]Redness. [3]Pain. [4]Burning Sensation. [5]Peeling Skin",
+        "precautions": "[1]Keep affected areas clean and dry. [2]Avoid tight or synthetic clothing. [3]Use antifungal creams. [4]Change socks and undergarments frequently."
+    },
+    {
+        "d_id": 12,
+        "d_name": "Gastroenteritis",
+        "description": "Gastroenteritis is an inflammation of the stomach and intestines, causing symptoms like nausea, vomiting, diarrhea, and abdominal pain.",
+        "symptoms": "[1]Nausea. [2]Vomiting. [3]Diarrhea. [4]Abdominal Pain. [5]Fever. [6]Dehydration",
+        "precautions": "[1]Stay hydrated with fluids. [2]Follow the BRAT diet (Bananas, Rice, Applesauce, Toast). [3]Avoid dairy and fatty foods. [4]Practice good hand hygiene."
+    },
+    {
+        "d_id": 13,
+        "d_name": "Bronchial Asthma",
+        "description": "Bronchial asthma is a chronic respiratory condition characterized by recurrent episodes of wheezing, breathlessness, and chest tightness.",
+        "symptoms": "[1]Wheezing. [2]Shortness of Breath. [3]Chest Tightness. [4]Coughing, especially at night or early morning",
+        "precautions": "[1]Use inhalers as prescribed. [2]Identify and avoid triggers. [3]Keep indoor air clean. [4]Create an asthma action plan."
+    },
+    {
+        "d_id": 14,
+        "d_name": "Cervical Spondylosis",
+        "description": "Cervical spondylosis is a degenerative condition affecting the neck, causing neck pain, stiffness, and potential nerve-related symptoms.",
+        "symptoms": "[1]Neck Pain. [2]Stiffness in the Neck. [3]Headaches. [4]Weakness or Numbness in the Arms or Hands",
+        "precautions": "[1]Maintain good neck posture. [2]Use ergonomic furniture. [3]Perform neck exercises. [4]Take breaks during prolonged activities."
+    },
+    {
+        "d_id": 15,
+        "d_name": "Paralysis (Brain Hemorrhage)",
+        "description": "Paralysis resulting from a brain hemorrhage involves the loss of muscle function and control due to bleeding in the brain.",
+        "symptoms": "[1]Sudden Weakness. [2]Loss of Sensation. [3]Difficulty Speaking. [4]Severe Headache.",
+        "precautions": "[1]Seek emergency medical attention. [2]Follow prescribed medications. [3]Participate in physical therapy. [4]Manage blood pressure."
+    },
+    {
+        "d_id": 16,
+        "d_name": "Jaundice",
+        "description": "Jaundice is a condition characterized by yellowing of the skin and eyes due to elevated bilirubin levels in the blood.",
+        "symptoms": "[1]Yellowing of Skin and Eyes. [2]Dark Urine. [3]Pale Stools. [4]Fatigue",
+        "precautions": "[1]Stay well-hydrated. [2]Follow a low-fat diet. [3]Avoid alcohol and certain medications. [4]Seek medical attention for the underlying cause."
+    },
+    {
+        "d_id": 17,
+        "d_name": "Chickenpox",
+        "description": "Chickenpox is a highly contagious viral infection characterized by an itchy rash and flu-like symptoms.",
+        "symptoms": "[1]Itchy Red Spots. [2]Fever. [3]Headache. [4]Fatigue",
+        "precautions": "[1]Take antiviral medications as prescribed. [2]Use calamine lotion for itching. [3]Stay hydrated. [4]Avoid scratching to prevent scarring."
+    },
+    {
+        "d_id": 18,
+        "d_name": "Dengue",
+        "description": "Dengue is a mosquito-borne viral infection causing flu-like symptoms and, in severe cases, leading to hemorrhagic fever.",
+        "symptoms": "[1]High Fever. [2]Severe Headache. [3]Joint and Muscle Pain. [4]Skin Rash",
+        "precautions": "[1]Stay well-hydrated. [2]Use mosquito repellent. [3]Wear long-sleeved clothing. [4]Seek medical attention for severe symptoms."
+    },
+    {
+        "d_id": 19,
+        "d_name": "Hepatitis B",
+        "description": "Hepatitis B is a viral infection affecting the liver and can lead to chronic liver disease and other complications.",
+        "symptoms": "[1]Jaundice. [2]Fatigue. [3]Abdominal Pain. [4]Dark Urine",
+        "precautions": "[1]Get vaccinated. [2]Practice safe sex. [3]Avoid sharing needles. [4]Get regular screenings for early detection."
+    },
+    {
+        "d_id": 20,
+        "d_name": "Tuberculosis",
+        "description": "Tuberculosis is a bacterial infection primarily affecting the lungs, causing respiratory symptoms and, in severe cases, other organ involvement.",
+        "symptoms": "[1]Persistent Cough. [2]Chest Pain. [3]Weight Loss. [4]Fever",
+        "precautions": "[1]Take prescribed antibiotics. [2]Follow treatment regimen completely. [3]Cover mouth when coughing. [4]Maintain good respiratory hygiene."
+    },
+    {
+        "d_id": 21,
+        "d_name": "Pneumonia",
+        "description": "Pneumonia is an inflammatory condition affecting the air sacs in the lungs, leading to symptoms like cough, fever, and difficulty breathing.",
+        "symptoms": "[1]Cough with Phlegm. [2]Fever. [3]Shortness of Breath. [4]Chest Pain",
+        "precautions": "[1]Take prescribed antibiotics. [2]Stay hydrated. [3]Rest and get plenty of sleep. [4]Practice good hand hygiene."
+    },
+    {
+        "d_id": 22,
+        "d_name": "Migraine",
+        "description": "A migraine can cause severe throbbing pain or a pulsing sensation, usually on one side of the head. It's often accompanied by nausea, vomiting, and extreme sensitivity to light and sound. Migraine attacks can last for hours to days, and the pain can be so severe that it interferes with your daily activities.",
+        "symptoms": "[1]Acidity. [2]Indigestion. [3]Headache. [4]Blurred and distorted vision. [5]Excessive Hunger. [6]Stiff Neck. [7]Depression. [8]Irritability. [9]Visual Disturbances",
+        "precautions": "[1]Meditation. [2]Reduce stress. [3]Use polaroid glasses in the sun. [4]Consult Doctor"
+    },
+    {
+        "d_id": 23,
+        "d_name": "Hemorrhoids (Piles)",
+        "description": "Hemorrhoids are swollen and inflamed veins in the rectum and anus, causing discomfort and bleeding.",
+        "symptoms": "[1]Rectal Bleeding. [2]Itching or Irritation. [3]Pain or Discomfort. [4]Swelling around the anus",
+        "precautions": "[1]Maintain a high-fiber diet. [2]Stay hydrated. [3]Avoid straining during bowel movements. [4]Practice good anal hygiene."
+    },
+    {
+        "d_id": 24,
+        "d_name": "Hypothyroidism",
+        "description": "Hypothyroidism is a condition where the thyroid gland does not produce enough thyroid hormone, leading to various metabolic and systemic effects.",
+        "symptoms": "[1]Fatigue. [2]Weight Gain. [3]Cold Sensitivity. [4]Dry Skin",
+        "precautions": "[1]Take prescribed thyroid medication. [2]Follow up with regular thyroid function tests. [3]Maintain a balanced diet. [4]Manage stress levels."
+    },
+    {
+        "d_id": 25,
+        "d_name": "Hypoglycemia",
+        "description": "Hypoglycemia is a condition characterized by low blood sugar levels, often occurring in individuals with diabetes or other metabolic disorders.",
+        "symptoms": "[1]Shakiness. [2]Sweating. [3]Irritability. [4]Confusion",
+        "precautions": "[1]Consume fast-acting carbohydrates (e.g., glucose tablets). [2]Eat regular, balanced meals and snacks. [3]Monitor blood sugar levels regularly. [4]Inform others about your condition."
+    },
+    {
+        "d_id": 26,
+        "d_name": "Osteoarthritis",
+        "description": "Osteoarthritis is a degenerative joint disease that occurs when the protective cartilage on the ends of bones wears down over time.",
+        "symptoms": "[1]Joint Pain. [2]Stiffness. [3]Swelling. [4]Limited Range of Motion",
+        "precautions": "[1]Engage in low-impact exercises. [2]Maintain a healthy weight. [3]Use joint protection techniques. [4]Consider physical therapy for strengthening."
+    },
+    {
+        "d_id": 27,
+        "d_name": "Arthritis",
+        "description": "Arthritis is a general term for conditions that affect the joints, causing pain, inflammation, and reduced joint mobility.",
+        "symptoms": "[1]Joint Pain. [2]Swelling. [3]Stiffness. [4]Reduced Range of Motion",
+        "precautions": "[1]Stay physically active with joint-friendly exercises. [2]Maintain a healthy weight. [3]Apply hot or cold therapy as needed. [4]Consider anti-inflammatory medications as prescribed."
+    },
+    {
+        "d_id": 28,
+        "d_name": "Urinary Tract Infection (UTI)",
+        "description": "A urinary tract infection is an infection in any part of the urinary system, including the kidneys, bladder, and urethra.",
+        "symptoms": "[1]Burning Sensation during Urination. [2]Frequent Urge to Urinate. [3]Cloudy or Strong-smelling Urine. [4]Pelvic Pain",
+        "precautions": "[1]Stay well-hydrated. [2]Urinate regularly and completely. [3]Practice good personal hygiene. [4]Avoid irritants like harsh soaps in the genital area."
+    },
+    {
+        "d_id": 29,
+        "d_name": "Psoriasis",
+        "description": "Psoriasis is a chronic skin condition characterized by red, itchy, and scaly patches that may occur on various parts of the body.",
+        "symptoms": "[1]Red, Inflamed Skin Patches. [2]Itching or Burning Sensation. [3]Thickened, Pitted Nails. [4]Joint Pain",
+        "precautions": "[1]Keep skin moisturized. [2]Avoid triggers like stress and certain medications. [3]Use mild soaps and avoid hot water during showers. [4]Consult a dermatologist for appropriate treatment."
+    },
+    {
+        "d_id": 30,
+        "d_name": "Impetigo",
+        "description": "Impetigo is a contagious skin infection characterized by red sores or blisters that can break open, ooze, and form a yellow-brown crust.",
+        "symptoms": "[1]Red Sores or Blisters. [2]Oozing of Fluid. [3]Formation of Yellow-Brown Crust. [4]Itching or Irritation",
+        "precautions": "[1]Keep the affected area clean and dry. [2]Avoid scratching the sores. [3]Use prescribed antibiotics as directed. [4]Avoid close contact with others until the infection clears."
+    },
+    {
+        "d_id": 31,
+        "d_name": "Allergy",
+        "description": "Allergies occur when the immune system reacts to a substance (allergen) as if it's harmful, leading to various symptoms.",
+        "symptoms": "[1]Sneezing. [2]Runny or Stuffy Nose. [3]Itchy or Watery Eyes. [4]Skin Rash or Hives",
+        "precautions": "[1]Identify and avoid allergens. [2]Use air purifiers indoors. [3]Take prescribed antihistamines. [4]Seek medical advice for severe reactions."
+    },
+    {
+        "d_id": 32,
+        "d_name": "Gastroesophageal Reflux Disease (GERD)",
+        "description": "GERD is a chronic condition where stomach acid flows back into the esophagus, causing irritation and symptoms.",
+        "symptoms": "[1]Heartburn. [2]Regurgitation. [3]Chest Pain. [4]Difficulty Swallowing",
+        "precautions": "[1]Maintain a healthy weight. [2]Avoid large meals and late-night eating. [3]Elevate the head of the bed during sleep. [4]Take prescribed medications as directed."
+    },
+    {
+        "d_id": 33,
+        "d_name": "Malaria",
+        "description": "An infectious disease caused by protozoan parasites from the Plasmodium family that can be transmitted by the bite of the Anopheles mosquito or by a contaminated needle or transfusion. Falciparum malaria is the most deadly type.",
+        "symptoms": "[1]Chills [2]Vomiting [3]High_Fever [4]Sweating [5]Headache [6]Nausea [7]Diarrhoea [8]Muscle_Pain",
+        "precautions": "[1]Consult nearest hospital. [2]Avoid oily food. [3]Avoid non-veg food. [4]Keep mosquitoes out."
+    },
+    {
+        "d_id": 34,
+        "d_name": "Psoriasis",
+        "description": "Psoriasis is a chronic skin condition characterized by red, itchy, and scaly patches that may occur on various parts of the body.",
+        "symptoms": "[1]Red, Inflamed Skin Patches. [2]Itching or Burning Sensation. [3]Thickened, Pitted Nails. [4]Joint Pain",
+        "precautions": "[1]Keep skin moisturized. [2]Avoid triggers like stress and certain medications. [3]Use mild soaps and avoid hot water during showers. [4]Consult a dermatologist for appropriate treatment."
+    },
+    {
+        "d_id": 35,
+        "d_name": "Drug Reaction",
+        "description": "Drug reaction refers to an adverse response or side effect caused by a medication or drug.",
+        "symptoms": "[1]Rash. [2]Itching. [3]Swelling. [4]Shortness of Breath. [5]Nausea. [6]Vomiting. [7]Dizziness. [8]Fever",
+        "precautions": "[1]Discontinue the medication. [2]Seek immediate medical attention. [3]Inform healthcare providers about all medications. [4]Avoid self-prescription"
+    },
+    {
+        "d_id": 36,
+        "d_name": "Varicose Veins",
+        "description": "Varicose veins are enlarged, twisted veins that often appear dark purple or blue. They usually occur on the legs and can cause pain, swelling, or aching.",
+        "symptoms": "[1]Visible, twisted veins. [2]Pain or aching in the legs. [3]Swelling in the legs. [4]Itching or burning over the veins",
+        "precautions": "[1]Elevate the legs when resting. [2]Wear compression stockings. [3]Engage in regular exercise. [4]Avoid prolonged standing or sitting"
+    },
+    {
+        "d_id": 37,
+        "d_name": "Chronic Cholestasis",
+        "description": "Chronic cholestasis is a condition where the flow of bile from the liver is reduced over a prolonged period, leading to various symptoms.",
+        "symptoms": "[1]Itchy Skin (Pruritus). [2]Dark Urine. [3]Pale Stool. [4]Jaundice",
+        "precautions": "[1]Manage and relieve itching symptoms. [2]Maintain a balanced diet low in fat. [3]Stay well-hydrated. [4]Follow up with regular liver function tests"
+    },
+    {
+        "d_id": 38,
+        "d_name": "Alcoholic Hepatitis",
+        "description": "Alcoholic hepatitis is inflammation of the liver caused by drinking alcohol. It can progress to more severe conditions and liver damage.",
+        "symptoms": "[1]Jaundice. [2]Abdominal Pain. [3]Nausea. [4]Vomiting. [5]Loss of Appetite",
+        "precautions": "[1]Stop drinking alcohol. [2]Seek medical attention. [3]Follow a balanced diet. [4]Get support for alcohol cessation"
+    },
+    {
+        "d_id": 39,
+        "d_name": "Paroxysmal Vertigo",
+        "description": "Paroxysmal vertigo is a condition characterized by sudden, intense episodes of dizziness or a spinning sensation.",
+        "symptoms": "[1]Sudden Dizziness. [2]Loss of Balance. [3]Nausea. [4]Vomiting",
+        "precautions": "[1]Avoid sudden head movements. [2]Sit or lie down during episodes. [3]Stay hydrated. [4]Consult a healthcare professional for further evaluation"
+    },
+    {
+    "d_id": 22,
+    "d_name": "COVID-19",
+    "description": "COVID-19 is a respiratory illness caused by the SARS-CoV-2 virus, leading to a range of symptoms from mild to severe, and it can be transmitted from person to person.",
+    "symptoms": "[1]Fever. [2]Cough. [3]Shortness of Breath. [4]Fatigue. [5]Loss of Taste or Smell.",
+    "precautions": "[1]Practice social distancing. [2]Wear masks in public places. [3]Wash hands frequently. [4]Get vaccinated. [5]Isolate if symptomatic."
+}
+
+]
+
+    # ... Repeat this pattern for the other diseases ...
+]
+
+# Save to JSON file
+with open("data.json", "w") as json_file:
+    json.dump(data, json_file, indent=2)
